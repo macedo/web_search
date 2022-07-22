@@ -23,3 +23,14 @@ func TestDuckDuckGoEngineURL(t *testing.T) {
 		t.Errorf("expected URL %q, got %q instead", expectedURL, e.URL())
 	}
 }
+
+func TestStackOverflowEngineURL(t *testing.T) {
+	e := NewStackOverflowEngine()
+	e.SetQuery("golang")
+
+	expectedURL := "https://stackoverflow.com/search?q=golang"
+
+	if e.URL() != expectedURL {
+		t.Errorf("expected URL %q, got %q instead", expectedURL, e.URL())
+	}
+}

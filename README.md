@@ -31,6 +31,11 @@ alias github='web_search -engine=github'
 alias stackoverflow='web_search -engine=stackoverflow'
 ```
 
+Now you can use these alias
+```
+gooogle golang applications
+```
+
 ## Motivation
 
 * Want to build a command line (that have use) using golang

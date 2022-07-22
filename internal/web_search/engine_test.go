@@ -34,3 +34,14 @@ func TestStackOverflowEngineURL(t *testing.T) {
 		t.Errorf("expected URL %q, got %q instead", expectedURL, e.URL())
 	}
 }
+
+func TestGithubEngineURL(t *testing.T) {
+	e := NewGithubEngine()
+	e.SetQuery("golang")
+
+	expectedURL := "https://github.com/search?q=golang"
+
+	if e.URL() != expectedURL {
+		t.Errorf("expected URL %q, got %q instead", expectedURL, e.URL())
+	}
+}
